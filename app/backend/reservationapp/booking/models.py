@@ -10,5 +10,5 @@ class Reservation(models.Model):
     check_out = models.DateField(blank=False)
 
     def __str__(self):
-        return f"{str_is_comfirmed} / {self.name} {self.surname} / {self.check_in} - {self.check_out}
+        return f"{str_is_comfirmed} / {self.name} {self.surname} / {self.check_in} - {self.check_out}"
 
