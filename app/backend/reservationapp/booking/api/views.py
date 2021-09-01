@@ -4,6 +4,7 @@ from booking.models import Reservation
 from .utils import get_single_dates, get_reservations_qs_of_given_dates
 
 
+# returns list of single days of all reservations in given date range
 class TakenDatesViewSet(generics.ListAPIView):
     serializer_class = DatesForCalendarSerializer
 
@@ -26,4 +27,3 @@ class TakenDatesViewSet(generics.ListAPIView):
                     single_dates_flat_list.append(single_date)
             return single_dates_flat_list
         return None
-
