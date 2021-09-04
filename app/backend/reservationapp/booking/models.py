@@ -12,3 +12,11 @@ class Reservation(models.Model):
 
     def __str__(self):
         return f"{self.name} {self.surname} / {self.check_in} - {self.check_out}"
+
+
+class Email(models.Model):
+    email = models.EmailField(blank=False)
+    is_subscribed = models.BooleanField(default=True)
+
+    def __str__(self):
+        return str(self.email)
