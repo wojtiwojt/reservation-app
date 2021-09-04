@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Reservation(models.Model):
     name = models.CharField(max_length=256, blank=False)
     surname = models.CharField(max_length=256, blank=False)
@@ -11,4 +12,3 @@ class Reservation(models.Model):
 
     def __str__(self):
         return f"{self.name} {self.surname} / {self.check_in} - {self.check_out}"
-
